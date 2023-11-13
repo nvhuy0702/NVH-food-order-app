@@ -3,19 +3,17 @@ package com.example.foodorderingapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.foodorderingapp.databinding.ActivityStartBinding
+import com.example.foodorderingapp.databinding.ActivitySignBinding
 
-class StartActivity : AppCompatActivity() {
-
-    private val binding: ActivityStartBinding by lazy {
-        ActivityStartBinding.inflate(layoutInflater)
+class SignActivity : AppCompatActivity() {
+    private val binding: ActivitySignBinding by lazy {
+        ActivitySignBinding.inflate(layoutInflater)
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        binding.nextButton.setOnClickListener {
-            val intent = Intent(this,LoginActivity::class.java)
+        binding.alreadyHaveAcc.setOnClickListener {
+            val intent=Intent(this,LoginActivity::class.java)
             startActivity(intent)
         }
     }
