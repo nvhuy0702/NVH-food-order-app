@@ -14,7 +14,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         binding.loginButton.setOnClickListener {
-            val intent=Intent(this, SignActivity::class.java)
+            val intent=Intent(this, SelectLocationActivity::class.java)
             startActivity(intent)
         }
         binding.dontHaveAcc.setOnClickListener {
